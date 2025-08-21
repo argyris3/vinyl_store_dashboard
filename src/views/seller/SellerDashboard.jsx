@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { MdCurrencyExchange, MdProductionQuantityLimits } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import Chart from "react-apexcharts";
+
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { get_seller_dashboard_data } from "../../store/Reducers/dashboardReducer";
@@ -169,12 +169,12 @@ const SellerDashboard = () => {
         <div className="w-full flex flex-wrap mt-7">
           <div className="w-full lg:w-7/12 lg:pr-3">
             <div className="w-full bg-gray-600 p-4 rounded-md">
-              <Chart
+              {/* <Chart
                 options={state.options}
                 series={state.series}
                 type="bar"
                 height={350}
-              />
+              /> */}
             </div>
           </div>
 

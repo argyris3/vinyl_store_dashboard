@@ -10,7 +10,7 @@ import {
   update_product,
   product_image_update,
   deleteProduct,
-} from "../../store/Reducers/productReducer";
+} from "../../store/reducers/productReducer";
 import { PropagateLoader } from "react-spinners";
 import { overrideStyle } from "../../utils/utils";
 import toast from "react-hot-toast";

@@ -5,9 +5,20 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    cors: false
+    proxy: {
+      '/api': {
+        target: "https://vinyl-store-dashboard.vercel.app",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        '/socket.io': {
+          target: 'ws://localhost:5174',
+          ws: true,
+          rewriteWsOrigin: true,
+        },
+      }
+    }
   },
   plugins: [react(), tailwindcss()],
-  base: '/',
+
 
 })

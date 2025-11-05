@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --background-image-logo:url('assets/regLogo.jpg')
+}
+
+@theme {
+    --background-image-login:url('assets/loginLogo.jpg')
+}
+
+

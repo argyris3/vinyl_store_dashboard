@@ -11,7 +11,7 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
         '/socket.io': {
-          target: 'ws://localhost:5174',
+          target: 'https://vinyl-store-dashboard.vercel.app',
           ws: true,
           rewriteWsOrigin: true,
         },

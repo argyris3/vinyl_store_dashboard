@@ -18,6 +18,14 @@ export default defineConfig({
       }
     }
   },
+  vercel: {
+    rewrites: [
+      {
+        source: '/(.*)',
+        destination: '/index.html',
+      },
+    ],
+  },
   plugins: [react(), tailwindcss()],
 
 

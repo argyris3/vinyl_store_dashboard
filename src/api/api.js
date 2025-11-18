@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const local = 'http://localhost:8001';
-const production = 'https://vinyl-store-backend-14g7.onrender.com'; // ✅ Fixed: 14g7 not k4g7
+const production = 'https://vinyl-store-backend-k4g7.onrender.com'; // ✅ 
 
 let api_url = '';
 let mode = 'pro';

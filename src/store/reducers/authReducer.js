@@ -25,7 +25,7 @@ export const seller_login = createAsyncThunk(
         console.log(info)
         try {
             const { data } = await api.post('/seller-login', info, { withCredentials: true })
-            console.log(data)
+
             localStorage.setItem('accessToken', data.token)
             return fulfillWithValue(data)
         } catch (error) {
@@ -187,7 +187,7 @@ export const authReducer = createSlice({
             })
             .addCase(admin_login.rejected, (state, { payload }) => {
                 state.loader = false;
-                state.errorMessage = payload.error
+                state.errorMessage = state.payload?.error || state.payload?.message || 'Network Error'
             })
             .addCase(admin_login.fulfilled, (state, { payload }) => {
                 state.loader = false;

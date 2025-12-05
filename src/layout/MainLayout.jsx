@@ -8,7 +8,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateCustomer, updateSellers } from "../store/reducers/chatReducer";
 
 const MainLayout = () => {
-  const socket = io("https://vinyl-store-backend-k4g7.onrender.com");
+  const socket = io([
+    "https://vinyl-store-backend-k4g7.onrender.com",
+    "http://localhost:8001",
+  ]);
   const dispatch = useDispatch();
   const { userInfo } = useSelector((state) => state.auth);
 

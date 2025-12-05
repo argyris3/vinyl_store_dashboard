@@ -13,7 +13,10 @@ import { IoMdPerson } from "react-icons/io";
 import admin from "../../assets/admin.jpg";
 
 const SellerToAdmin = () => {
-  const socket = io("https://vinyl-store-backend-k4g7.onrender.com");
+  const socket = io([
+    "https://vinyl-store-backend-k4g7.onrender.com",
+    "http://localhost:8001",
+  ]);
   const dispatch = useDispatch();
   const scrollRef = useRef();
   const [text, setText] = useState("");

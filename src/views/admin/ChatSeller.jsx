@@ -17,7 +17,10 @@ import { FaRegFaceGrinHearts } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 
 const ChatSeller = () => {
-  const socket = io("https://vinyl-store-backend-k4g7.onrender.com");
+  const socket = io([
+    "https://vinyl-store-backend-k4g7.onrender.com",
+    "http://localhost:8001",
+  ]);
   const [show, setShow] = useState(false);
   const [text, setText] = useState("");
   const scrollRef = useRef();

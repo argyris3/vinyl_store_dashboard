@@ -17,7 +17,10 @@ import toast from "react-hot-toast";
 import { useRef } from "react";
 
 const SellerToCustomer = () => {
-  const socket = io("https://vinyl-store-backend-k4g7.onrender.com");
+  const socket = io([
+    "https://vinyl-store-backend-k4g7.onrender.com",
+    "http://localhost:8001",
+  ]);
   const scrollRef = useRef();
   const [show, setShow] = useState(false);
   const sellerId = 65;

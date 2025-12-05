@@ -4,7 +4,7 @@ const local = 'http://localhost:8001';
 const production = 'https://vinyl-store-backend-k4g7.onrender.com'; // ✅ 
 
 let api_url = '';
-let mode = 'local';
+let mode = 'pro';
 
 if (mode === 'pro') {
     api_url = production;

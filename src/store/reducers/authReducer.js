@@ -44,7 +44,7 @@ export const get_user_info = createAsyncThunk(
             console.log(data)
             return fulfillWithValue(data)
         } catch (error) {
-            // console.log(error.response.data)
+            console.log(error.response.data)
             return rejectWithValue(error.response.data)
         }
     }
